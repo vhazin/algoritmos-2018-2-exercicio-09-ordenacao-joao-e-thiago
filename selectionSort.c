@@ -9,12 +9,12 @@ void printSorted(int * arr, int size);
 
 int *milAleatorios() {
     
-    static int  r[1000];
+    static int  r[10000];
     int i;
     
     srand( (unsigned)time( NULL ) );
     
-    for ( i = 0; i < 1000; ++i) {
+    for ( i = 0; i < 10000; ++i) {
         r[i] = rand();
     }
     printf("\n Vetor de mil numeros aleatorios gerados \n");
@@ -37,11 +37,11 @@ int main(){
    // }
     
     start = clock();
-    printSorted(data,1000);
+    printSorted(data,10000);
     end = clock();
     cpu_time_used = ((float) (end - start)) / CLOCKS_PER_SEC;
     
-    printf("\n o tempo gasto para função foi %f \n",cpu_time_used);
+    printf("\n o tempo gasto para função SELECTIONSORT foi %f \n",cpu_time_used);
     
     
     return 0;
@@ -76,10 +76,6 @@ void printSorted(int arr[], int size){
     }
     
     
-    for(int i = 0; i < size; i++)
-    {
-        printf("%d",arr[i]);
-    }
     
     
     

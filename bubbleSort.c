@@ -5,12 +5,12 @@
 
 int *milAleatorios() {
     
-    static int  r[1000];
+    static int  r[10000];
     int i;
     
     srand( (unsigned)time( NULL ) );
     
-    for ( i = 0; i < 1000; ++i) {
+    for ( i = 0; i < 10000; ++i) {
         r[i] = rand();
     }
     printf("\n Vetor de mil numeros aleatorios gerados \n");
@@ -27,7 +27,7 @@ int main(){
     clock_t start, end;
     float cpu_time_used;
     
-    int size = 1000;
+    int size = 10000;
     //printf("\nDigite a quantidade de elementos>> ");
     //scanf("%d",&size);
     int *data;
@@ -44,7 +44,7 @@ int main(){
     end = clock();
     cpu_time_used = ((float) (end - start)) / CLOCKS_PER_SEC;
     
-    printf("\n o tempo necessario para função foi %f \n", cpu_time_used);
+    printf("\n o tempo necessario para função BUBBLESORTfoi %f \n", cpu_time_used);
     
     
     
@@ -71,12 +71,6 @@ void printSorted(int arr[], int size){  // FUNÇÃO BUBBLESORT
         
     }
     
-    printf("Ordenado: ");
-    for(int i = 0; i < size; i++)
-    {
-        printf("%d ",arr[i]);
-    }
-    printf("\n");
     
     
     
