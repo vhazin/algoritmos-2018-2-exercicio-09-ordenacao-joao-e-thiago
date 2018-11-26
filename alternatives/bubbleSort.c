@@ -10,7 +10,7 @@ void swap(int * a, int *b){
 }
 
 
-void insertionSort(int arr[], int n){
+void bubbleSort(int arr[], int n){
     
     
     for(int i = 0; i < n-1; i++){
@@ -28,7 +28,7 @@ void insertionSort(int arr[], int n){
 int main(void){
     int arr[] = {1,3,1,2,11};
     int n = sizeof(arr)/sizeof(arr[0]);
-    insertionSort(arr,n);
+    bubbleSort(arr,n);
 
     
     for(int i = 0; i < n; i++)
