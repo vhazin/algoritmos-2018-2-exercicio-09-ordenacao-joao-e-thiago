@@ -13,15 +13,15 @@ void swap(int * a, int *b){
 void insertionSort(int arr[], int n){
     
     int key;
-    for(int i = 1; i < n; i++)
+    for(int i = 1; i < n; i++)  // percorre o vetor do segundo elemento até o final
     {
         key = arr[i];
-        int j = i-1;
-        while(j >=0 && arr[j]>key){
+        int j = i-1; // determina o fim do vetor ordenado
+        while(j >=0 && arr[j]>key){ // enquanto não chegar no inicio do array ordenado e a chave for menor que o elemento de j
             arr[j+1] = arr[j];
             j = j-1;
         }
-        arr[j+1] = key;
+        arr[j+1] = key; // atualiza a chave
     }
     
 }
